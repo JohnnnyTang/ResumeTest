@@ -1,2 +1,2 @@
 # ResumeTest
-try to make a online resume
+try to make an online resume for myself
