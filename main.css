@@ -184,8 +184,8 @@ table td {
     width: 12%;
     height: 8%;
     position: fixed;
-    bottom: 10%;
-    left: 87%;
+    bottom: 5%;
+    right: 0%;
     transform: translate(-50%, -50%);
 }
 
@@ -348,6 +348,96 @@ table td {
     }
 }
 
+#goTop {
+    position:fixed;
+    z-index:999;
+    right:0;
+    top:70%;
+    transform:translateY(-50%);
+    padding:20px;
+    color:#fff;
+    background:rgba(10, 1, 141, 0.5);
+    border:none;
+    opacity:0;
+    transition: opacity 0.4s linear;
+}
+#goTop.is-visible {
+    opacity:1;
+}
+#goTop::before {
+    content: "Top ↑";
+    font-family:'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.message {
+    position: fixed;
+    width: 20%;
+    height: 45%;
+    top: 7%;
+    left: 2%;
+    background-color: rgba(203, 229, 253, 0.562);
+    border-radius: 8%;
+    overflow: hidden; 
+}
+
+.message-title {
+    margin-top: 6%;
+    margin-left: 5%;
+    text-shadow: 2px 1px rgba(136, 185, 241, 0.8);
+}
+
+.message-title.night-mode {
+    color: rgba(207, 207, 207, 0.7);
+    text-shadow: 2px 1px rgba(142, 165, 190, 0.8);
+}
+
+.messages{
+    background:rgba(241, 254, 255, 0.637);
+    display:inline-block;
+    padding:13px;
+    width:274px;
+    height: 65%;
+    margin-left: 5%;
+    margin-top: 3%;
+    border-radius:2px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+    position:relative;
+}
+.messages.night-mode {
+    background: rgba(180, 213, 255, 0.637);
+}
+
+.messages span{
+    color:#555;
+    font-weight:bold;
+}
+.messages p{
+    padding-top:5px;
+}
+
+.message-input{
+    margin-left: 5%;
+    padding:13px 0px;
+}
+
+.message-input input{
+    border:none;
+    padding:10px 12px;
+    background:#d3d3d3;
+    width:70%;
+    border-radius:4px;
+}
+
+.message-input a.send{
+    text-decoration: none;
+    margin-right: 3%;
+    padding:6px 15px;
+    background:#6294c2;
+    border-radius:4px;
+    float:right;
+    cursor: pointer;
+}
 
 .container.night-mode {
     background: #181b23;
@@ -380,4 +470,8 @@ table td {
 
 body.night-mode {
     background: #292c36;
+}
+
+#goTop.night-mode {
+    background:rgba(42, 98, 131, 0.733);
 }
